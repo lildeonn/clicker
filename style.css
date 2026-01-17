@@ -1,0 +1,110 @@
+body, head {
+    display: flex;
+    background-color: #808080;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s ease;
+}
+
+.container {
+    position: absolute;
+    bottom: 325px;
+    outline-width: 5px;
+    outline-color: white;
+}
+
+.container img {
+    position: absolute;
+    top: -117px;
+    left: -15px;
+    height: 100px;
+    width: 100px;
+}
+
+#clicker {
+    background-color: #00ff00;
+    transition: transform 0.5s ease-in-out;
+}
+
+#reset {
+    background-color: #ff0000;
+    transition: transform 0.5s ease-in-out;
+}
+
+#AmountDisplay {
+    text-align: center;
+}
+
+#ClickPerSecondDisplay {
+    text-align: center;
+    font-size: 1rem;
+    position: relative;
+    top: 25px;
+    width: 100px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 0;
+}
+
+#ClickPerSecondDisplay::before,
+#ClickPerSecondDisplay::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+}
+
+#ClickPerSecondDisplay::before {
+    background: linear-gradient(to right, transparent, rgba(255, 0, 0, 0.3));
+    transform: rotate(-45deg);
+    opacity: 0.7;
+}
+
+#ClickPerSecondDisplay::after {
+    background: linear-gradient(to bottom, transparent, rgba(0, 255, 0, 0.3));
+    transform: rotate(45deg);
+    opacity: 0.7;
+}
+
+#clicker:hover,
+#reset:hover {
+    transform: scale(1.1);
+}
+
+#shop, #cart {
+    margin-top: 20px;
+    width: 300px;
+}
+
+#shop-items, #cart-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+#shop-items li, #cart-items li {
+    margin-bottom: 10px;
+}
+
+#total {
+    font-weight: bold;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+button {
+    transition: background-color 0.5s ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
